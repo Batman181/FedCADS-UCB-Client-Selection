@@ -35,11 +35,13 @@ Drift injected at round 50 via label shift: y_new = (y + 1) mod 10 on clients 0-
 ```
 FedCADS-UCB-Client-Selection/
 ├── src/
+│   ├── DivFL.py            # Client update logic and DivFL selection
 │   ├── data_setup.py       # MNIST loading and non-IID partitioning
 │   ├── models.py           # LR, SVM, DNN, Simple CNN architectures
-│   ├── main.py             # Client update logic and DivFL selection
 │   ├── shapley.py          # Monte Carlo Shapley estimation, S-FedAvg
 │   ├── fedcads.py          # FedCADS-UCB: CUSUM, UCB, quarantine, fairness
+│   ├── train_task1.py      # Comparison of DivFL and S-FedAvg algoriths using four different models   
+│   ├── train_task2.py      # Comparison of DivFL and S-FedAvg after Concept Drift
 │   └── train_task3.py      # Full three-algorithm comparison training loop
 ├── results/                # Output plots for all three tasks
 ├── docs/                   # IEEE project report (PDF)
